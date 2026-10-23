@@ -1,5 +1,6 @@
-import io, os, json, wave
+import io, os, sys, json, wave
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dotenv import load_dotenv
 env_path = Path(__file__).resolve().parent.parent / ".env"
 if env_path.exists():
