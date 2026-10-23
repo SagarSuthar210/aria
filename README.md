@@ -1,6 +1,16 @@
 # Aria – Alexa+-style web assistant (Gemini + agentic web search)
 
-## Run
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/SagarSuthar210/aria)
+
+## Free 1-Click Deployment
+
+Deploy online in under 2 minutes:
+1. Click the **[Deploy to Render](https://render.com/deploy?repo=https://github.com/SagarSuthar210/aria)** button.
+2. Sign in with your GitHub account (`SagarSuthar210`).
+3. Set your `GEMINI_API_KEY` when prompted.
+4. Click **Apply / Deploy**. Your app will be live at `https://aria-xxxx.onrender.com`.
+
+## Run Locally
 ```bash
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
