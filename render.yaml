@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: aria
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: cd backend && uvicorn server:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: GEMINI_TTS_MODEL
+        value: gemini-2.5-flash-preview-tts
+      - key: GEMINI_VOICE
+        value: Kore
+      - key: SEARCH_REGION
+        value: in-en
+      - key: PYTHON_VERSION
+        value: "3.11"

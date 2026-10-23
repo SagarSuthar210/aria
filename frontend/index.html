@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-mode="voice" data-state="idle">
+<header>
+  <div class="brand">Aria</div>
+  <div class="seg" role="tablist" aria-label="Input mode">
+    <button id="m-voice" role="tab" aria-selected="true">Voice</button>
+    <button id="m-text" role="tab" aria-selected="false">Text</button>
+    <span class="thumb"></span>
+  </div>
+  <button id="mute" class="icon" aria-label="Toggle spoken replies" title="Spoken replies">
+    <svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="wave" d="M16 8.5a5 5 0 010 7M18.5 6a8.5 8.5 0 010 12"/></svg>
+  </button>
+</header>
+
+<main id="feed" aria-live="polite">
+  <section id="hero">
+    <div class="orb-wrap">
+      <button id="orb" class="orb" aria-label="Talk to Aria"><span class="ring r1"></span><span class="ring r2"></span><span class="core"></span></button>
+    </div>
+    <h1 id="hero-title">What can I find for you?</h1>
+    <p id="hero-sub">Tap the orb and ask anything.</p>
+    <div class="chips" id="chips"></div>
+  </section>
+</main>
+
+<footer>
+  <div id="live" class="live" hidden></div>
+  <form id="composer" autocomplete="off">
+    <input id="input" placeholder="Ask anything, e.g. best budget running shoes under ₹3000" aria-label="Message">
+    <button class="send" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </form>
+  <div id="voicebar" class="voicebar">
+    <span id="hint">Tap the orb to speak</span>
+  </div>
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
